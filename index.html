@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <header>
+            <a href="#" class="logo"><img src="imgs/logo.png"></a>
+            <div class="text">
+                <p>String GOAT - for tennis</p>
+            </div>
+            <!-- <ul> -->
+                <!-- <li><a href="#" class="active">Home</a></li> -->
+                <!-- <li><a herf="#">About</a></li> -->
+                <!-- <li><a herf="#">Support</a></li> -->
+            <!-- </ul> -->
+            <!-- <a href="#" class="app"><ion-icon name="arrow-down-outline"></ion-icon>Download App</a> -->
+        </header>
+
+        <div class="contentBx">
+            <div class="text">
+                <h2>String GOAT</h2>
+                <!-- <p>The tool to enhance your tennis game performance</p> -->
+                <p>Record and track your tennis string data</p>
+                <p>테니스 스트링 데이터를 기록하고 트래킹 해보세요</p>
+                <!-- <h4>Download the app</h4> -->
+            <br>
+                <a href="https://apps.apple.com/kr/app/string-goat-for-tennis/id6444395925" class="btn"><ion-icon name="logo-apple"></ion-icon> App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=com.stringgoat.dev.StringGOAT" class="btn"><ion-icon name="logo-google-playstore"></ion-icon> Play Store</a>
+            </div>
+
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <div class="imgBx">
+                <img src="imgs/string_goat_0.png" class="slides active">
+                <img src="imgs/string_goat_1.png" class="slides">
+                <img src="imgs/string_goat_2.png" class="slides">
+                <img src="imgs/string_goat_3.png" class="slides">
+                <img src="imgs/string_goat_4.png" class="slides">
+                <img src="imgs/string_goat_5.png" class="slides">
+            </div>
+        </div>
+
+        <div class="sci">
+            <a href="https://sites.google.com/view/string-goat/" style="text-decoration:none">Privacy Policy</a>
+        </div>
+
+        <!-- <ul class="sci"> -->
+            <!-- <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li> -->
+            <!-- <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li> -->
+            <!-- <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li> -->
+        <!-- </ul> -->
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const slides = document.querySelectorAll('.slides');
+        const dots = document.querySelectorAll('.dot');
+
+        function SetActive(i){
+            for(slide of slides)
+            slide.classList.remove('active');
+            slides[i].classList.add('active');
+
+            // add active class in indicator
+            for(dot of dots)
+            dot.classList.remove('active');
+            dots[i].classList.add('active');
+        }
+
+        for(let j = 0; j<dots.length; j++){
+            dots[j].addEventListener('click', function(){
+                SetActive(j);
+            })
+        }
+    </script>
+</body>
+</html>
